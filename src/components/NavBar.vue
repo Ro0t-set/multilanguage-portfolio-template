@@ -1,29 +1,22 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { Language } from '../locale/locale.d';
-import { getLocaleDictionary } from '../locale/dictionary';
+import { computed } from 'vue'
+import { useAppStore } from '../stores/app'
+import { Language } from '../locale/locale.d'
 
+const store = useAppStore()
 
-const currentLanguage = ref(Language.en);
-const toggleButtonLabel = computed(() => 
-  currentLanguage.value === Language.en ? 'English' : 'Italiano'
-);
-
-const toggleLanguage = () => {
-  currentLanguage.value = currentLanguage.value === Language.en ? Language.it : Language.en;
-};
-
-import { ref } from 'vue';
+const toggleButtonLabel = computed(() =>
+  store.selectedLang === Language.en ? 'Italiano' : 'English'
+)
 </script>
 
 <template>
   <nav class="navbar">
     <ul class="nav-links">
-      <li>{{ getLocaleDictionary(currentLanguage).navbar.home }}</li>
-      <li>{{ getLocaleDictionary(currentLanguage).navbar.about }}</li>
-      <li>{{ getLocaleDictionary(currentLanguage).navbar.contact }}</li>
+      <li>{{ store.currentDictionary.navbar.home }}</li>
+      <li>{{ store.currentDictionary.navbar.about }}</li>
     </ul>
-    <button @click="toggleLanguage" class="toggle-button">
+    <button @click="store.toggleLanguage" class="toggle-button">
       Switch to {{ toggleButtonLabel }}
     </button>
   </nav>
