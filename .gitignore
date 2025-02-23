@@ -25,3 +25,10 @@ dist-ssr
 
 # Osx
 .DS_Store
+
+
+#vscode
+.vscode
+
+#jetbrains
+.idea
