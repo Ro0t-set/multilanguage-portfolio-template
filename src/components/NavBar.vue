@@ -6,7 +6,7 @@ import { Language } from '../locale/locale.d'
 const store = useAppStore()
 
 const toggleButtonLabel = computed(() =>
-  store.selectedLang === Language.en ? 'Italiano' : 'English'
+  store.selectedLang === Language.en ? 'English' : 'Italian'
 )
 </script>
 

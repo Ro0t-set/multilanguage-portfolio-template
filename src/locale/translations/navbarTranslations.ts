@@ -1,13 +1,19 @@
-import type { NavbarTranslations } from "./locale";
+import type { NavbarTranslations } from "../locale";
 
 export const navbarTranslationsEn: NavbarTranslations = {
   home: "Home",
   about: "About Us",
   contact: "Contact",
+  experience: "Experience",
+  projects: "Projects",
+  skills: "Skills"
 };
 
 export const navbarTranslationsIt: NavbarTranslations = {
     home: "Home",
-    about: "Chi Siamo",
+    about: "Chi Sono",
     contact: "Contatti",
+    experience: "Esperienza",
+    projects: "Progetti",
+    skills: "Competenze"
   };

@@ -1,16 +1,24 @@
 <!-- App.vue -->
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
-import HelloWorld from './components/HelloWorld.vue';
+import AboutMe from './components/AboutMe.vue';
+import Experieice from './components/Experieice.vue';
+import Skills from './components/Skills.vue';
+import Projects from './components/Projects.vue';
+import Contact from './components/Contact.vue';
+
 
 
 </script>
 
 <template>
-  <!-- Include the NavBar at the top -->
-  <NavBar />
   <div class="main-content">
-    <HelloWorld msg="Vite + Vue" />
+    <NavBar />
+    <AboutMe />
+    <Experieice />
+    <Skills />
+    <Projects />
+    <Contact />
   </div>
 </template>
 
