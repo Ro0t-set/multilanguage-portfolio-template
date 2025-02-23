@@ -21,17 +21,25 @@ function scrollToSection(section: string) {
       <AboutMe />
     </section>
 
+    <q-separator />
+
     <section id="experience">
       <Experience />
     </section>
+
+    <q-separator />
 
     <section id="skills">
       <Skills />
     </section>
 
+    <q-separator />
+
     <section id="projects">
       <Projects />
     </section>
+
+    <q-separator />
 
     <section id="contact">
       <Contact />

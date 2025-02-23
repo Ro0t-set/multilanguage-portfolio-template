@@ -16,8 +16,7 @@ function onTabClick(tabName: string) {
 </script>
 
 <template>
-  <div class="nav-bar fixed-top bg-primary">
-    <q-toolbar class="shadow-1 rounded-borders">
+    <q-toolbar class="fixed-top bg-primary shadow-1 rounded-borders">
       <q-space />
       <q-tabs shrink stretch>
         <q-tab name="about" :label="store.currentDictionary.navbar.about" @click="onTabClick('about')" />
@@ -28,5 +27,11 @@ function onTabClick(tabName: string) {
       </q-tabs>
       <q-btn  :label="toggleButtonLabel" @click="store.toggleLanguage" />
     </q-toolbar>
-  </div>
+
 </template>
+
+<style scoped>
+.q-toolbar {
+  z-index: 2000;
+}
+</style>

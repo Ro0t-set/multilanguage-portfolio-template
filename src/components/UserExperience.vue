@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { useAppStore } from '../stores/app'
+import SectionTitle from './utility/SectionTitle.vue';
 
 const store = useAppStore()
 </script>
 
 <template>
   <div class="experience">
-    <h2>{{ store.currentDictionary.experience.experienceTitle }}</h2>
+    <SectionTitle :title = "store.currentDictionary.experience.experienceTitle" />
     <q-timeline color="secondary">
       <q-timeline-entry
         v-for="experience in store.currentDictionary.experience.experiences"
