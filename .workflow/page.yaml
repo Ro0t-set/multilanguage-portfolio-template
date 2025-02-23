@@ -1,33 +1,56 @@
-name: CI
+name: Deploy application and releases on Pages
+on:
+  push:
+  workflow_dispatch:
 
-on: [push]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🛎️ Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name: 📦 Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Create artifact directory
+        run: mkdir -p ./site
+
+      - name: Build Scala project
+        run: |
+          npm install
+          npm run build
+
+      - name: Copy HTML pages
+        run: cp -r ./dist ./site
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: '20'
+          path: ./site
 
-      - name: 📥 Install dependencies
-        run: npm install
-
-      - name: 🏗️ Build
-        env:
-          NODE_ENV: production
-          VITE_USER_NODE_ENV: production
-        run: npm run build -- --mode production
-
-      - name: 🚀Deploy to GitHub Pages🚀
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
+          name: site
+          path: ./site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
