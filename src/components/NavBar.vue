@@ -26,7 +26,7 @@ function onTabClick(tabName: string) {
         <q-tab name="projects" :label="store.currentDictionary.navbar.projects" @click="onTabClick('projects')" />
         <q-tab name="contact" :label="store.currentDictionary.navbar.contact" @click="onTabClick('contact')" />
       </q-tabs>
-      <q-btn flat :label="toggleButtonLabel" @click="store.toggleLanguage" />
+      <q-btn  :label="toggleButtonLabel" @click="store.toggleLanguage" />
     </q-toolbar>
   </div>
 </template>

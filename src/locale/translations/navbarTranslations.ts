@@ -2,7 +2,7 @@ import type { NavbarTranslations } from "../locale";
 
 export const navbarTranslationsEn: NavbarTranslations = {
   home: "Home",
-  about: "About Us",
+  about: "About Me",
   contact: "Contact",
   experience: "Experience",
   projects: "Projects",
