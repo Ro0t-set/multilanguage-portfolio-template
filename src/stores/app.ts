@@ -6,6 +6,7 @@ import { dictionary } from '../locale/dictionary'
 export const useAppStore = defineStore('app', () => {
   const defaultLang = Language.en
   const selectedLang = ref(defaultLang)
+  const tab = ref('');
   
   const currentDictionary = computed(() => dictionary(selectedLang.value))
   
@@ -16,7 +17,8 @@ export const useAppStore = defineStore('app', () => {
   return {
     selectedLang,
     currentDictionary,
-    toggleLanguage
+    toggleLanguage,
+    tab
   }
 },
     { persist: true }

@@ -32,3 +32,5 @@ dist-ssr
 
 #jetbrains
 .idea
+
+dist
