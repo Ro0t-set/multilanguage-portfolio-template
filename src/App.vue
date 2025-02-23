@@ -5,11 +5,26 @@ import Experience from './components/UserExperience.vue'
 import Skills from './components/UserSkills.vue'
 import Projects from './components/UserProjects.vue'
 import Contact from './components/UserContact.vue'
+import type { DirectiveBinding } from 'vue'
 
 function scrollToSection(section: string) {
   const el = document.getElementById(section)
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
+const vScrollReveal = {
+  mounted(el: HTMLElement, binding: DirectiveBinding) {
+    const direction = binding.value || 'left'
+    el.classList.add(direction === 'right' ? 'reveal-right' : 'reveal-left')
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active')
+          obs.unobserve(entry.target)
+        }
+      })
+    })
+    observer.observe(el)
   }
 }
 </script>
@@ -17,31 +32,43 @@ function scrollToSection(section: string) {
 <template>
   <div class="main-content">
     <NavBar @scroll-to-section="scrollToSection" />
-    <section id="about">
+    
+    <section
+      id="about"
+      v-scroll-reveal="'left'"
+    >
       <AboutMe />
     </section>
-
     <q-separator />
 
-    <section id="experience">
+    <section
+      id="experience"
+      v-scroll-reveal="'right'"
+    >
       <Experience />
     </section>
-
     <q-separator />
 
-    <section id="skills">
+    <section
+      id="skills"
+      v-scroll-reveal="'left'"
+    >
       <Skills />
     </section>
-
     <q-separator />
 
-    <section id="projects">
+    <section
+      id="projects"
+      v-scroll-reveal="'right'"
+    >
       <Projects />
     </section>
-
     <q-separator />
 
-    <section id="contact">
+    <section
+      id="contact"
+      v-scroll-reveal="'left'"
+    >
       <Contact />
     </section>
   </div>
@@ -54,5 +81,19 @@ function scrollToSection(section: string) {
 section {
   margin: 3em 0;
   scroll-margin-top: 60px;
+}
+
+
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+.reveal-left { transform: translateX(-100px); }
+.reveal-right { transform: translateX(100px); }
+
+.reveal-active {
+  transform: translateX(0);
+  opacity: 1;
 }
 </style>
