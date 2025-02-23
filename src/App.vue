@@ -17,7 +17,6 @@ function scrollToSection(section: string) {
 <template>
   <div class="main-content">
     <NavBar @scrollToSection="scrollToSection" />
-
     <section id="about">
       <AboutMe />
     </section>
@@ -46,5 +45,6 @@ function scrollToSection(section: string) {
 }
 section {
   margin: 3em 0;
+  scroll-margin-top: 60px;
 }
 </style>
