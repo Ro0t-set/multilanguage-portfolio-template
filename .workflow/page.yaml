@@ -13,12 +13,14 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '23'
+          node-version: '21'
 
       - name: 📥 Install dependencies
         run: npm install
 
       - name: 🏗️ Build
+        env:
+          NODE_ENV: production
         run: npm run build
 
       - name: 🚀Deploy to GitHub Pages🚀  // --> this deploys to gh-pages

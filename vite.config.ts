@@ -4,10 +4,9 @@ import vue from '@vitejs/plugin-vue'
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/vite-vue-portfolio/" : "/",
+  base: mode === "production" ? "./" : "/",
   plugins: [
     vue({
-      
       template: { transformAssetUrls }
     }),
 
