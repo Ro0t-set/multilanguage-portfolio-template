@@ -3,7 +3,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "./" : "/",
   plugins: [
     vue({
       template: { transformAssetUrls }
@@ -14,5 +15,5 @@ export default defineConfig({
         new URL('./src/quasar-variables.sass', import.meta.url)
       )
     })
-  ]
-})
+  ],
+}))
