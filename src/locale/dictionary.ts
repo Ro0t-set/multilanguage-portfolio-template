@@ -15,7 +15,6 @@ export const dictionary: Record<Language, Locale> = {
 };
 
 
-
-export function translate<K extends keyof Locale, T extends keyof Locale[K]>(lang: Language, section: K, key: T): string {
-  return dictionary[lang][section][key] as unknown as string;
+export function getLocaleDictionary(Language: Language): Locale {
+  return dictionary[Language];
 }

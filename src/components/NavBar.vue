@@ -1,23 +1,27 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useLanguage } from '../composables/useLanguage';
+import { Language } from '../locale/locale.d';
+import { getLocaleDictionary } from '../locale/dictionary';
 
-const { currentLanguage, toggleLanguage, translate } = useLanguage();
 
-const homeLabel = computed(() => translate('navbar', 'home'));
-const aboutLabel = computed(() => translate('navbar', 'about'));
-const contactLabel = computed(() => translate('navbar', 'contact'));
+const currentLanguage = ref(Language.en);
 const toggleButtonLabel = computed(() => 
-  currentLanguage.value === 'en' ? 'English' : 'Italiano'
+  currentLanguage.value === Language.en ? 'English' : 'Italiano'
 );
+
+const toggleLanguage = () => {
+  currentLanguage.value = currentLanguage.value === Language.en ? Language.it : Language.en;
+};
+
+import { ref } from 'vue';
 </script>
 
 <template>
   <nav class="navbar">
     <ul class="nav-links">
-      <li>{{ homeLabel }}</li>
-      <li>{{ aboutLabel }}</li>
-      <li>{{ contactLabel }}</li>
+      <li>{{ getLocaleDictionary(currentLanguage).navbar.home }}</li>
+      <li>{{ getLocaleDictionary(currentLanguage).navbar.about }}</li>
+      <li>{{ getLocaleDictionary(currentLanguage).navbar.contact }}</li>
     </ul>
     <button @click="toggleLanguage" class="toggle-button">
       Switch to {{ toggleButtonLabel }}
