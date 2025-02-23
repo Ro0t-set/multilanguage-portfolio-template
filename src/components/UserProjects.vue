@@ -9,22 +9,39 @@ const store = useAppStore()
   <div class="projects q-pa-md">
     <SectionTitle :title="store.currentDictionary.projects.projectTitle" />
     <div class="row q-col-gutter-md justify-center">
-      <div v-for="project in store.currentDictionary.projects.projects" 
-           :key="project.title"
-           class="col-12 col-sm-6 col-md-4">
-        <q-card flat bordered class="project-card">
+      <div
+        v-for="project in store.currentDictionary.projects.projects" 
+        :key="project.title"
+        class="col-12 col-sm-6 col-md-4"
+      >
+        <q-card
+          flat
+          bordered
+          class="project-card"
+        >
           <q-card-section>
-            <div class="text-h6 ellipsis-2-lines">{{ project.title }}</div>
+            <div class="text-h6 ellipsis-2-lines">
+              {{ project.title }}
+            </div>
             <q-separator class="q-my-sm" />
-            <div class="text-body2 description-container">{{ project.description }}</div>
+            <div class="text-body2 description-container">
+              {{ project.description }}
+            </div>
           </q-card-section>
 
           <q-card-section class="q-pt-none tech-section">
-            <div class="text-subtitle2 q-mb-xs">Technologies:</div>
-            <div class="text-caption">{{ project.technologies }}</div>
+            <div class="text-subtitle2 q-mb-xs">
+              Technologies:
+            </div>
+            <div class="text-caption">
+              {{ project.technologies }}
+            </div>
           </q-card-section>
 
-          <q-card-actions align="right" class="q-mt-auto">
+          <q-card-actions
+            align="right"
+            class="q-mt-auto"
+          >
             <q-btn
               flat
               color="secondary"

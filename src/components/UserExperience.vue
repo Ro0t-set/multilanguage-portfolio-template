@@ -7,7 +7,7 @@ const store = useAppStore()
 
 <template>
   <div class="experience">
-    <SectionTitle :title = "store.currentDictionary.experience.experienceTitle" />
+    <SectionTitle :title="store.currentDictionary.experience.experienceTitle" />
     <q-timeline color="secondary">
       <q-timeline-entry
         v-for="experience in store.currentDictionary.experience.experiences"
