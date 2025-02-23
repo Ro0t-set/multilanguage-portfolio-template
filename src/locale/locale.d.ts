@@ -1,5 +1,3 @@
-import type { Path } from "typescript";
-
 export enum Language {
   it = "it",
   en = "en",

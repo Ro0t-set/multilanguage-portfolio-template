@@ -2,10 +2,10 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
 import AboutMe from './components/AboutMe.vue';
-import Experieice from './components/Experieice.vue';
-import Skills from './components/Skills.vue';
-import Projects from './components/Projects.vue';
-import Contact from './components/Contact.vue';
+import Experieice from './components/UserExperience.vue';
+import Skills from './components/UserSkills.vue';
+import Projects from './components/UserProjects.vue';
+import Contact from './components/UserContact.vue';
 
 
 
