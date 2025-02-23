@@ -13,7 +13,7 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '21'
+          node-version: '20'
 
       - name: 📥 Install dependencies
         run: npm install
@@ -21,9 +21,10 @@ jobs:
       - name: 🏗️ Build
         env:
           NODE_ENV: production
-        run: npm run build
+          VITE_USER_NODE_ENV: production
+        run: npm run build -- --mode production
 
-      - name: 🚀Deploy to GitHub Pages🚀  // --> this deploys to gh-pages
+      - name: 🚀Deploy to GitHub Pages🚀
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
