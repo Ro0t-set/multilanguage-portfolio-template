@@ -62,13 +62,15 @@ function getLabel(tabKey: keyof typeof store.currentDictionary.navbar) {
       :label="getLabel('contact')"
       @click="onTabClick('contact')"
     />
-  <q-btn
-    flat
-    icon="flag_circle"
-    :label="toggleButtonLabel"
-    @click="store.toggleLanguage"
-  />
-</q-tabs>
+    <q-separator vertical />
+    <q-btn
+      flat
+      stack
+      icon="flag_circle"
+      :label="toggleButtonLabel"
+      @click="store.toggleLanguage"
+    />
+  </q-tabs>
 </template>
 
 <style scoped>
