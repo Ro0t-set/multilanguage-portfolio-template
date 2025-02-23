@@ -7,14 +7,24 @@ const store = useAppStore()
 
 <template>
   <div class="skills q-pa-md">
-    <h2 class="text-h2 text-center q-mb-lg">{{ store.currentDictionary.skills.skillTitle }}</h2>
+    <h2 class="text-h2 text-center q-mb-lg">
+      {{ store.currentDictionary.skills.skillTitle }}
+    </h2>
     <div class="row q-col-gutter-sm">
-      <div v-for="skill in store.currentDictionary.skills.skills" 
-           :key="skill.name"
-           class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-        <q-card flat bordered class="skill-card q-pa-sm">
+      <div
+        v-for="skill in store.currentDictionary.skills.skills" 
+        :key="skill.name"
+        class="col-xs-6 col-sm-4 col-md-3 col-lg-2"
+      >
+        <q-card
+          flat
+          bordered
+          class="skill-card q-pa-sm"
+        >
           <q-card-section class="q-pa-xs">
-            <div class="text-subtitle2">{{ skill.name }}</div>
+            <div class="text-subtitle2">
+              {{ skill.name }}
+            </div>
             <q-linear-progress
               :value="skill.level"
               color="secondary"

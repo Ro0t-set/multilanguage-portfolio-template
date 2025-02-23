@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import { useAppStore } from '../stores/app'
+import { useAppStore } from "../stores/app";
 
-const store = useAppStore()
+const store = useAppStore();
 </script>
 
 <template>
-  <q-card-section flat bordered class="about-me">
+  <q-card-section
+    flat
+    bordered
+    class="about-me"
+  >
     <q-card-section class="text-center">
-      <q-avatar size="300px" class="q-mb-md">
+      <q-avatar
+        size="300px"
+        class="q-mb-md"
+      >
         <q-img
           src="../assets/profile.webp"
           spinner-color="primary"
@@ -15,9 +22,10 @@ const store = useAppStore()
         />
       </q-avatar>
       <q-card-section>
-        <div class="text-center"> <!-- Added wrapper div with text-center -->
+        <div class="text-center">
+          <!-- Added wrapper div with text-center -->
           <h1 class="text-h1 text-center q-mb-lg">
-            {{ store.currentDictionary.generalInfo.name }} 
+            {{ store.currentDictionary.generalInfo.name }}
             {{ store.currentDictionary.generalInfo.surname }}
           </h1>
           <div class="text-body1 q-mt-md">

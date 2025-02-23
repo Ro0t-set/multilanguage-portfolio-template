@@ -16,18 +16,43 @@ function onTabClick(tabName: string) {
 </script>
 
 <template>
-    <q-toolbar class="fixed-top bg-primary shadow-1 rounded-borders">
-      <q-space />
-      <q-tabs shrink stretch>
-        <q-tab name="about" :label="store.currentDictionary.navbar.about" @click="onTabClick('about')" />
-        <q-tab name="experience" :label="store.currentDictionary.navbar.experience" @click="onTabClick('experience')" />
-        <q-tab name="skills" :label="store.currentDictionary.navbar.skills" @click="onTabClick('skills')" />
-        <q-tab name="projects" :label="store.currentDictionary.navbar.projects" @click="onTabClick('projects')" />
-        <q-tab name="contact" :label="store.currentDictionary.navbar.contact" @click="onTabClick('contact')" />
-      </q-tabs>
-      <q-btn  :label="toggleButtonLabel" @click="store.toggleLanguage" />
-    </q-toolbar>
-
+  <q-toolbar class="fixed-top bg-primary shadow-1 rounded-borders">
+    <q-space />
+    <q-tabs
+      shrink
+      stretch
+    >
+      <q-tab
+        name="about"
+        :label="store.currentDictionary.navbar.about"
+        @click="onTabClick('about')"
+      />
+      <q-tab
+        name="experience"
+        :label="store.currentDictionary.navbar.experience"
+        @click="onTabClick('experience')"
+      />
+      <q-tab
+        name="skills"
+        :label="store.currentDictionary.navbar.skills"
+        @click="onTabClick('skills')"
+      />
+      <q-tab
+        name="projects"
+        :label="store.currentDictionary.navbar.projects"
+        @click="onTabClick('projects')"
+      />
+      <q-tab
+        name="contact"
+        :label="store.currentDictionary.navbar.contact"
+        @click="onTabClick('contact')"
+      />
+    </q-tabs>
+    <q-btn
+      :label="toggleButtonLabel"
+      @click="store.toggleLanguage"
+    />
+  </q-toolbar>
 </template>
 
 <style scoped>

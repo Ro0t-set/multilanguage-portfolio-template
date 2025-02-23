@@ -16,7 +16,7 @@ function scrollToSection(section: string) {
 
 <template>
   <div class="main-content">
-    <NavBar @scrollToSection="scrollToSection" />
+    <NavBar @scroll-to-section="scrollToSection" />
     <section id="about">
       <AboutMe />
     </section>

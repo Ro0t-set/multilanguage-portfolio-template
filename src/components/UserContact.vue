@@ -9,38 +9,71 @@ const store = useAppStore()
   <div class="contact q-pa-md">
     <SectionTitle :title="store.currentDictionary.contact.contactTitle" />
     <div class="row justify-center">
-      <q-card flat class="contact-card q-pa-md col-12 col-sm-8 col-md-6">
+      <q-card
+        flat
+        class="contact-card q-pa-md col-12 col-sm-8 col-md-6"
+      >
         <q-list>
-          <q-item clickable tag="a" :href="'mailto:' + store.currentDictionary.contact.email">
+          <q-item
+            clickable
+            tag="a"
+            :href="'mailto:' + store.currentDictionary.contact.email"
+          >
             <q-item-section avatar>
-              <q-icon name="email" color="secondary" />
+              <q-icon
+                name="email"
+                color="secondary"
+              />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ store.currentDictionary.contact.email }}</q-item-label>
             </q-item-section>
           </q-item>
 
-          <q-item clickable tag="a" :href="'tel:' + store.currentDictionary.contact.phone">
+          <q-item
+            clickable
+            tag="a"
+            :href="'tel:' + store.currentDictionary.contact.phone"
+          >
             <q-item-section avatar>
-              <q-icon name="phone" color="secondary" />
+              <q-icon
+                name="phone"
+                color="secondary"
+              />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ store.currentDictionary.contact.phone }}</q-item-label>
             </q-item-section>
           </q-item>
 
-          <q-item clickable tag="a" :href="store.currentDictionary.contact.linkedin" target="_blank">
+          <q-item
+            clickable
+            tag="a"
+            :href="store.currentDictionary.contact.linkedin"
+            target="_blank"
+          >
             <q-item-section avatar>
-              <q-icon name="fab fa-linkedin" color="secondary" />
+              <q-icon
+                name="fab fa-linkedin"
+                color="secondary"
+              />
             </q-item-section>
             <q-item-section>
               <q-item-label>LinkedIn</q-item-label>
             </q-item-section>
           </q-item>
 
-          <q-item clickable tag="a" :href="store.currentDictionary.contact.github" target="_blank">
+          <q-item
+            clickable
+            tag="a"
+            :href="store.currentDictionary.contact.github"
+            target="_blank"
+          >
             <q-item-section avatar>
-              <q-icon name="fab fa-github" color="secondary" />
+              <q-icon
+                name="fab fa-github"
+                color="secondary"
+              />
             </q-item-section>
             <q-item-section>
               <q-item-label>GitHub</q-item-label>
