@@ -6,11 +6,30 @@ const store = useAppStore()
 
 <template>
   <div class="experience">
-        <h2>{{ store.currentDictionary.experience.experienceTitle }}</h2>
-        <ul>
-          <li v-for="experience in store.currentDictionary.experience.experiences" :key="experience.title">
-            {{ experience.title }}, {{ experience.description }}, {{ experience.company }}, {{ experience.location }}, {{ experience.startDate }}, {{ experience.endDate }}
-          </li>
-        </ul>
+    <h2>{{ store.currentDictionary.experience.experienceTitle }}</h2>
+    <q-timeline color="secondary">
+      <q-timeline-entry
+        v-for="experience in store.currentDictionary.experience.experiences"
+        :key="experience.title"
+        :title="experience.company"
+        :subtitle="`${experience.title} | ${experience.startDate || ''} - ${experience.endDate || ''}`"
+      >
+        <div>{{ experience.description }}</div>
+        <div class="text-caption q-mt-sm">
+          {{ experience.location || '' }}
         </div>
+      </q-timeline-entry>
+    </q-timeline>
+  </div>
 </template>
+
+<style scoped>
+.experience {
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+</style>

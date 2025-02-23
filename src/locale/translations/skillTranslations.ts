@@ -3,19 +3,19 @@ import type { Skill, SkillTranslations } from "../locale";
 const skills: Skill[] = [
     {
         name: "JavaScript",
-        level: 4
+        level: 1
     },
     {
         name: "TypeScript",
-        level: 3
+        level: 0.5
     },
     {
         name: "React",
-        level: 4
+        level: 0.6
     },
     {
         name: "Angular",
-        level: 3
+        level: 0.1
     }
 ];
 
