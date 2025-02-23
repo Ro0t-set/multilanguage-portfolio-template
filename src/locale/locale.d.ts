@@ -19,16 +19,40 @@ export interface GeneralInfoTranslations {
   description: string;
 }
 
+export interface Experience {
+  title: string;
+  company: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}
+
 export interface ExperienceTranslations {
   experienceTitle: string;
+  experiences: Experience[];
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  technologies: string;
+  url: string;
 }
 
 export interface ProjectTranslations {
   projectTitle: string;
+  projects: Project[];
+}
+
+export interface Skill {
+  name: string;
+  level: Int;
 }
 
 export interface SkillTranslations {
   skillTitle: string;
+  skills: Skill[];
 }
 
 export interface ContactTranslations {
