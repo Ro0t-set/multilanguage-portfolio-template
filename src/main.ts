@@ -4,6 +4,7 @@ import App from './App.vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
 import { Quasar } from 'quasar'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 import '@quasar/extras/material-icons/material-icons.css'
 

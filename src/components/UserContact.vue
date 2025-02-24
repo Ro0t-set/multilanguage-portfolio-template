@@ -51,12 +51,12 @@ const store = useAppStore()
             tag="a"
             :href="store.currentDictionary.contact.linkedin"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <q-item-section avatar>
-              <q-icon
-                name="fab fa-linkedin"
-                color="secondary"
-              />
+              <q-icon>
+                <i class="fab fa-linkedin fa-lg" />
+              </q-icon>
             </q-item-section>
             <q-item-section>
               <q-item-label>LinkedIn</q-item-label>
@@ -68,12 +68,12 @@ const store = useAppStore()
             tag="a"
             :href="store.currentDictionary.contact.github"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <q-item-section avatar>
-              <q-icon
-                name="fab fa-github"
-                color="secondary"
-              />
+              <q-icon>
+                <i class="fab fa-github fa-lg" />
+              </q-icon>
             </q-item-section>
             <q-item-section>
               <q-item-label>GitHub</q-item-label>
@@ -102,5 +102,18 @@ const store = useAppStore()
 
 .q-item:hover {
   background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Add styles for icons */
+.fab {
+  color: var(--q-secondary);
+}
+
+.fa-linkedin {
+  font-size: 1.2em;
+}
+
+.fa-github {
+  font-size: 1.2em;
 }
 </style>
