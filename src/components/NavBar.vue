@@ -34,31 +34,31 @@ function getLabel(tabKey: keyof typeof store.currentDictionary.navbar) {
   >
     <q-tab
       name="about"
-      icon="person"
+      icon="fas fa-user"
       :label="getLabel('about')"
       @click="onTabClick('about')"
     />
     <q-tab
       name="education-experience"
-      icon="work"
+      icon="fas fa-briefcase"
       :label="getLabel('experience')"
       @click="onTabClick('education-experience')"
     />
     <q-tab
       name="skills"
-      icon="code"
+      icon="fas fa-code"
       :label="getLabel('skills')"
       @click="onTabClick('skills')"
     />
     <q-tab
       name="projects"
-      icon="folder"
+      icon="fas fa-folder"
       :label="getLabel('projects')"
       @click="onTabClick('projects')"
     />
     <q-tab
       name="contact"
-      icon="mail"
+      icon="fas fa-envelope"
       :label="getLabel('contact')"
       @click="onTabClick('contact')"
     />
@@ -66,8 +66,9 @@ function getLabel(tabKey: keyof typeof store.currentDictionary.navbar) {
     <q-btn
       flat
       stack
-      icon="flag_circle"
+      icon="fas fa-globe"
       :label="toggleButtonLabel"
+      :class="'dark'"
       @click="store.toggleLanguage"
     />
   </q-tabs>

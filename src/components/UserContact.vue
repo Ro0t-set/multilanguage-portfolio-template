@@ -20,10 +20,9 @@ const store = useAppStore()
             :href="'mailto:' + store.currentDictionary.contact.email"
           >
             <q-item-section avatar>
-              <q-icon
-                name="email"
-                color="secondary"
-              />
+              <q-icon>
+                <i class="fas fa-envelope fa-lg" />
+              </q-icon>
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ store.currentDictionary.contact.email }}</q-item-label>
@@ -36,10 +35,9 @@ const store = useAppStore()
             :href="'tel:' + store.currentDictionary.contact.phone"
           >
             <q-item-section avatar>
-              <q-icon
-                name="phone"
-                color="secondary"
-              />
+              <q-icon>
+                <i class="fas fa-phone fa-lg" />
+              </q-icon>
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ store.currentDictionary.contact.phone }}</q-item-label>
@@ -105,15 +103,10 @@ const store = useAppStore()
 }
 
 /* Add styles for icons */
-.fab {
+.fab, .fas{
   color: var(--q-secondary);
-}
-
-.fa-linkedin {
   font-size: 1.2em;
 }
 
-.fa-github {
-  font-size: 1.2em;
-}
+
 </style>

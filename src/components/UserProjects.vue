@@ -48,7 +48,7 @@ const store = useAppStore()
               :href="project.url"
               target="_blank"
               label="View Project"
-              icon="launch"
+              icon="fas fa-external-link-alt"
             />
           </q-card-actions>
         </q-card>
