@@ -2,6 +2,7 @@
 import NavBar from './components/NavBar.vue'
 import AboutMe from './components/AboutMe.vue'
 import Experience from './components/UserExperience.vue'
+import Education from './components/UserEducation.vue'
 import Skills from './components/UserSkills.vue'
 import Projects from './components/UserProjects.vue'
 import Contact from './components/UserContact.vue'
@@ -42,11 +43,29 @@ const vScrollReveal = {
     <q-separator />
 
     <section
-      id="experience"
+      id="education-experience"
       v-scroll-reveal="'right'"
     >
-      <Experience />
+      <div class="row q-col-gutter-md">
+        <div class="col-12 col-md-6">
+          <div
+            id="education"
+            v-scroll-reveal="'left'"
+          >
+            <Education />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div
+            id="experience"
+            v-scroll-reveal="'right'"
+          >
+            <Experience />
+          </div>
+        </div>
+      </div>
     </section>
+
     <q-separator />
 
     <section

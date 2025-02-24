@@ -6,11 +6,13 @@ import { experienceTranslationsEn, experienceTranslationsIt } from "./translatio
 import { ProjectTranslationsEn, ProjectTranslationsIt } from "./translations/projectTranslations";
 import { skillTranslationsEn, skillTranslationsIt } from "./translations/skillTranslations";
 import { contactTranslationsEn, contactTranslationsIt } from "./translations/contactTranslations";
+import { educationTranslationsEn, educationTranslationsIt } from "./translations/educationTranslations";
 
 const dictionaryList: Record<Language, Locale> = {
   [Language.en]: {
     navbar: navbarTranslationsEn,
     generalInfo: generalInfoEn,
+    education: educationTranslationsEn,
     experience: experienceTranslationsEn,
     projects: ProjectTranslationsEn,
     skills: skillTranslationsEn,
@@ -19,6 +21,7 @@ const dictionaryList: Record<Language, Locale> = {
   [Language.it]: {
     navbar: navbarTranslationsIt,
     generalInfo: generalInfoIt,
+    education: educationTranslationsIt,
     experience: experienceTranslationsIt,
     projects: ProjectTranslationsIt,
     skills: skillTranslationsIt,

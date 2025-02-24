@@ -6,6 +6,7 @@ export enum Language {
 export interface NavbarTranslations {
   home: string;
   about: string;
+  education: string;
   experience: string;
   projects: string;
   skills: string;
@@ -63,9 +64,24 @@ export interface ContactTranslations {
   github: string;
 }
 
+export interface Education {
+  title: string;
+  institution: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}
+
+export interface EducationTranslations {
+  educationTitle: string; 
+  educations: Education[];
+}
+
 export interface Locale {
   navbar: NavbarTranslations;
   generalInfo: GeneralInfoTranslations;
+  education: EducationTranslations;
   experience: ExperienceTranslations;
   projects: ProjectTranslations;
   skills: SkillTranslations;
