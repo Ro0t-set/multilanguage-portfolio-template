@@ -1,5 +1,7 @@
 # Vue.js Multilanguage Portfolio Template
 
+![Logo](public/logo.png)
+
 A modern, responsive portfolio template built with Vue 3, TypeScript, and Quasar Framework. Features smooth scrolling, animations, and multilanguage support.
 
 ## 🚀 Features
@@ -31,4 +33,4 @@ A modern, responsive portfolio template built with Vue 3, TypeScript, and Quasar
 2. Clone the project
 3. Install dependencies with `npm install`
 4. Start the development server with `npm run dev`
-5. Customize the content in `src/assets/` and `src/locale/transaltions`
+5. Customize the content in `src/assets/` and `src/locale/translations`
