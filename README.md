@@ -1,5 +1,34 @@
-# Vue 3 + TypeScript + Vite
+# Vue.js Multilanguage Portfolio Template
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern, responsive portfolio template built with Vue 3, TypeScript, and Quasar Framework. Features smooth scrolling, animations, and multilanguage support.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🚀 Features
+
+- 🌐 Multilanguage support (English/Italian)
+- 📱 Fully responsive design
+- 🎨 Clean and modern UI with Quasar Framework
+- ⚡ Built with Vue 3 + Vite for optimal performance
+- 💻 TypeScript for better code quality
+- 🔄 Smooth scroll animations
+- 🎯 Section-based layout
+- 📊 Skills visualization
+- 📝 Timeline for education and experience
+- 🔧 Easy to customize and extend
+
+## 🛠️ Tech Stack
+
+- Vue 3
+- TypeScript
+- Quasar Framework
+- Pinia (State Management)
+- Vite
+- ESLint
+- Semantic Release
+
+## 📦 Installation and Customize
+
+1. Fork the repository
+2. Clone the project
+3. Install dependencies with `npm install`
+4. Start the development server with `npm run dev`
+5. Customize the content in `src/assets/` and `src/locale/transaltions`
