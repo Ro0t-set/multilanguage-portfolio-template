@@ -7,9 +7,9 @@ const store = useAppStore()
 
 <template>
   <div class="skills q-pa-md">
-    <h2 class="text-h2 text-center q-mb-lg">
+    <div class="text-h2 text-center q-mb-lg">
       {{ store.currentDictionary.skills.skillTitle }}
-    </h2>
+    </div>
     <div class="row q-col-gutter-sm">
       <div
         v-for="skill in store.currentDictionary.skills.skills" 

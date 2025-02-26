@@ -23,11 +23,10 @@ const store = useAppStore();
       </q-avatar>
       <q-card-section>
         <div class="text-center">
-          <!-- Added wrapper div with text-center -->
-          <h1 class="text-h1 text-center q-mb-lg">
+          <div class="text-h1 text-center q-mb-lg">
             {{ store.currentDictionary.generalInfo.name }}
             {{ store.currentDictionary.generalInfo.surname }}
-          </h1>
+          </div>
           <div class="text-body1 q-mt-md">
             {{ store.currentDictionary.generalInfo.role }}
           </div>
@@ -44,10 +43,5 @@ const store = useAppStore();
 .about-me {
   max-width: 800px;
   margin: 0 auto;
-}
-
-.text-h1 {
-  text-align: center;
-  width: 100%;
 }
 </style>
