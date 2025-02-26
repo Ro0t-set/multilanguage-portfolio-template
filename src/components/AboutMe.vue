@@ -16,18 +16,20 @@ const store = useAppStore();
         class="q-mb-md"
       >
         <q-img
-          src="../assets/profile.webp"
+          src="../assets/profile.jpeg"
           spinner-color="primary"
+          fit="cover"
+          position="center"
           spinner-size="82px"
         />
       </q-avatar>
       <q-card-section>
         <div class="text-center">
           <div class="text-h1 text-center q-mb-lg">
-            {{ store.currentDictionary.generalInfo.name }}
+            {{ store.currentDictionary.generalInfo.name }} 
             {{ store.currentDictionary.generalInfo.surname }}
           </div>
-          <div class="text-body1 q-mt-md">
+          <div class="text-body q-mt-md">
             {{ store.currentDictionary.generalInfo.role }}
           </div>
           <div class="text-caption q-mt-sm">
@@ -43,5 +45,10 @@ const store = useAppStore();
 .about-me {
   max-width: 800px;
   margin: 0 auto;
+}
+.q-avatar .q-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
 }
 </style>

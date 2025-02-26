@@ -30,11 +30,14 @@ const store = useAppStore()
           </q-item>
 
           <q-item
+            v-if="store.currentDictionary.contact.phone"
             clickable
             tag="a"
             :href="'tel:' + store.currentDictionary.contact.phone"
           >
-            <q-item-section avatar>
+            <q-item-section
+              avatar
+            >
               <q-icon>
                 <i class="fas fa-phone fa-lg" />
               </q-icon>
