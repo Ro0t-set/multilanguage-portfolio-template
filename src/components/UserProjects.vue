@@ -59,7 +59,7 @@ const store = useAppStore()
 
 <style scoped>
 .project-card {
-  height: 400px; /* Fixed height for all cards */
+  height: 320;
   display: flex;
   flex-direction: column;
 }

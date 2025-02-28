@@ -16,7 +16,7 @@ const store = useAppStore();
         class="q-mb-md"
       >
         <q-img
-          src="../assets/profile.jpeg"
+          src="../assets/profile.webp"
           spinner-color="primary"
           fit="cover"
           position="center"
